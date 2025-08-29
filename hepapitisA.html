@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .virus-map-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .virus-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .map {
+            flex: 1;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        .symptoms-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .symptoms-list {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .symptoms-image {
+            flex: 1;
+        }
+
+        .data img {
+            width: 200px;
+            /* Set the width of the icons */
+            height: 200px;
+            /* Set the height of the icons */
+            display: inline-block;
+            /* Ensure icons stay in line with text */
+            vertical-align: middle;
+            /* Align icons vertically in the middle */
+            margin-right: 10px;
+            /* Add spacing between the icon and text */
+        }
+
+        .data .number {
+            font-weight: bold;
+        }
+
+        .data .label {
+            color: #888;
+        }
+
+        .content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .content h3 {
+            margin: 0 10px 10px 0;
+        }
+
+        .content p {
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!--Main information-->
+    <div class="virus-map-container">
+        <div class="virus-info">
+            <h3>Hepapitis A (HAV)</h3>
+            <img src="img/ganA.jpg" alt="ganA" width="600" height="400">
+        </div>
+
+        <div class="map">
+            <h2> Virginia, America is the first place where Hepapitits A was discovered </h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3219325.5440382487!2d-79.42091505!3d38.00343195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884cd670bdbcb2cd%3A0xc04e4149b746a695!2zVmlyZ2luaWEsIEhvYSBL4buz!5e0!3m2!1svi!2s!4v1710932926168!5m2!1svi!2s"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <h3>Year Originated</h3>
+        <p>1812</p>
+        <h3>Location of Origin</h3>
+        <p>Viriginia, America </p>
+        <h3>Spread of Virus/Disease</h3>
+        <p> Local Pandemic </p>
+        <h3>Precautions required</h3>
+        <p> Apply Vaccine as soon as possible, stay contact with doctor, have healthy habits such as wash
+            hand frequently, bath and clean frequently, eat and drink clean, boil and avoid junk food </p>
+    </div>
+
+    <img src="img/HepapitisAtrans.jpg" alt="HepapititsAtransmition" witdh="800px" height="480px">
+    <p> The hepatitis A virus is transmitted primarily by the faecal-oral route; that is when an uninfected person
+        ingests food or water that has been contaminated with the faeces of an infected person. In families, this may
+        happen though dirty hands when an infected person prepares food for family members. Waterborne outbreaks, though
+        infrequent, are usually associated with sewage-contaminated or inadequately treated water.
+
+        The virus can also be transmitted through close physical contact (such as oral-anal sex) with an infectious
+        person, although casual contact among people does not spread the virus. </p>
+
+    <div class="symptoms-container">
+        <div class="symptoms-list">
+            <h2>Symptoms of Hepapitis A</h2>
+            <p>People with Hepapitis A have reported a wide range of symptoms ranging from mild to severe. Symptoms may
+                appear approximately 14 up to 28 days after exposure to the virus. Anyone can have mild to severe
+                symptoms.
+                Possible symptoms
+                include:</p>
+
+            <ul>
+                <li>Mild fever or chills</li>
+                <li>Dark Urine</li>
+                <li>Shortness of breath or difficulty breathing</li>
+                <li>Fatigue</li>
+                <li>Nausea or vomiting</li>
+                <li>Diarrhea</li>
+                <li>Severe Itching</li>
+                <li>Yellow eyes </li>
+            </ul>
+
+            <p>This list does not include all possible symptoms. Symptoms may change with new Influenza variants and can
+                vary by person. The CDC will continue to update this list as we learn more about Influenza.</p>
+        </div>
+
+        <div class="symptoms-image">
+            <img src="img/hepapitisAsymptoms.png" alt="HAV Symptoms Image" width="1000px" height="600px">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-lg-7 text-center mx-auto">
+                <h2 class="section-heading">A Simple Report on Hepapitis </h2>
+                <p>The stats below show the danger and consequences of Hepapitis A </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/activecase.jpg" alt="Active Cases Icon" class="icon text-primary">
+                    <strong class="d-block number">780,042</strong>
+                    <span class="label">Active Cases</span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/death.png" alt="Deaths Icon" class="icon text-primary">
+                    <strong class="d-block number">approximately 64,658</strong>
+                    <span class="label">Deaths</span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/recover.png" alt="Recovered Cases Icon" class="icon text-primary">
+                    <strong class="d-block number">514,287</strong>
+                    <span class="label">Recovered Cases</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>The consequences of Hepapitis A </h3>
+    <img src="img/HepapitisAcon.png" witdh="720px" height="480px">
+    <p> The impact is mostly on International Food Trade: </p>
+    <p> In low-income countries, HAV is spread through contaminated water, direct contact with infectious individuals,
+        and consumption of contaminated foods. Because these transmission pathways all relate to water, sanitation, and
+        hygiene, it may be impossible to isolate the particular exposure responsible for causing a cluster of hepatitis
+        A cases. In high-income countries, where safe drinking water is routinely available, it is more feasible to
+        identify the specific food items that cause outbreaks. The two primary food groups linked to outbreaks of
+        hepatitis A are produce and seafood (Greig and Ravel 2009), including frozen berries, green onions, lettuce,
+        oysters, clams, and mussels (Acheson and Fiore 2004). The World Health Organization’s Foodborne Disease Burden
+        Epidemiology Reference Group estimated that more than 90,000 people worldwide died of hepatitis A disease in
+        2010 and that nearly 30,000 of those deaths could be directly attributed to foodborne acquisition of HAV (Kirk
+        et al. 2015). </p>
+
+    <p> Although most foodborne outbreaks of hepatitis A are small, affecting only a few dozen or several hundred
+        people, these outbreaks can become widespread. In 1988, nearly 300,000 people in Shanghai contracted HAV by
+        eating raw clams, a popular delicacy that had been consumed by nearly one-third of the city’s residents in the
+        month before the outbreak began (Halliday et al. 1991). In 2003, more than 600 people contracted HAV from a
+        single restaurant in Pennsylvania, in the United States, by eating contaminated green onions that had been
+        imported from Mexico (Wheeler et al. 2005). </p>
+
+    <p> International trade in foods is accelerating. For example, in the United States, the proportion of consumed food
+        that is imported from other countries increased from 12% in 1990 to 20% in 2013; this proportion increased from
+        56% to 97% for fish and shellfish, from 31% to 49% for fruits and nuts, and from 4% to 20% for vegetables
+        (Jerardo 2016). The number of foodborne outbreaks in the United States rose steadily as the proportion of food
+        that is imported increased (Gould et al. 2017). Although not all foodborne outbreaks of hepatitis A in
+        high-income countries are caused by imported foods, the risk of HAV contamination is elevated when foods are
+        procured from low- or middle-income countries that are HAV-endemic. </p>
+
+    <p> Globalization is expected to increase the number of foodborne outbreaks in high-income countries, and there is
+        already evidence of this change occurring. For example, frozen berries have caused numerous outbreaks of
+        hepatitis A in Europe. In one large outbreak that occurred between January 2013 and August 2014, more than 1100
+        people in Italy, Germany, Norway, and 10 other European countries were hospitalized with hepatitis A disease.
+        Some of the cases were travelers to Italy, but most were people who had not traveled outside of their home
+        countries in the months before they became ill. Molecular characterization and trace-back investigations linked
+        the outbreak to Bulgarian blackberries and Polish red currants that had been added to mixed berry products
+        (Severi et al. 2015). Bulgaria is classified as an upper-middle-income country, unlike its high-income
+        neighbors, and the 86% rate of access to improved sanitation facilities in Bulgaria in 2015 was considerably
+        lower than the 99% European average (UNICEF/WHO 2015). The fruit products likely became contaminated as a result
+        of poor worker hygiene or the spraying of produce with irrigation water that contained raw sewage (Tavoschi et
+        al. 2015). At the same time that this large outbreak was occurring, separate multicountry hepatitis A outbreaks
+        in other parts of Europe were linked to strawberries imported from Egypt and Morocco (Gossner and Severi 2014).
+        Foodborne outbreaks of HAV in other parts of the world have also been reported with increasing frequency. A
+        multistate outbreak in the United States in 2013 was attributed to imported frozen pomegranate arils from
+        Turkey, which is classified as an upper middle-income country (Collier et al. 2014). Pomegranate seeds from
+        Egypt were implicated in an HAV outbreak in Canada in 2012 (Swinkels et al. 2014). Hundreds of Australians
+        contracted HAV from imported sundried and semidried tomatoes in 2009, and the same strain also caused a
+        tomato-borne outbreak in the Netherlands in 2009–2010 (Donnan et al. 2012). </p>
+
+    <p>Preventing HAV cases caused by imported foods requires improving food-processing practices in source countries.
+        Globalization provides opportunities to establish, strengthen, and enforce international food safety regulations
+        and to improve information sharing about hazards (Käferstein et al. 1997). Strategies for reducing the threat
+        from foodborne infections usually require both exporting and importing countries to be willing to invest
+        resources in supporting enhanced food protections. Corporations involved in international food production,
+        manufacturing, and trade can also be incentivized to take steps to better guarantee the quality and safety of
+        food products. Without improvements, many residents of high- and middle-income countries face an increasing risk
+        of contracting HAV from food products as global food trade accelerates. </p>
+
+
+    <h3>Main Treatment </h3>
+    <img src="img/HepapitisAvac.jpg" width="600px" height="400px">
+
+
+    <p> There is no specific treatment for hepatitis A. Recovery from symptoms following infection may be slow and can
+        take several weeks or months. It is important to avoid unnecessary medications that can adversely affect the
+        liver, e.g. acetaminophen, paracetamol. </p>
+
+    <p>Hospitalization is unnecessary in the absence of acute liver failure. Therapy is aimed at maintaining comfort
+        and adequate nutritional balance, including replacement of fluids that are lost from vomiting and diarrhoea.</p>
+
+    <p>So far the most obvious way is prepare to have a vaccine during childhood that can help prevent infecting HAV
+        that lead to Hepapitis A </p>
+
+    <p>Discover other virus and how they devastated the society <a href="typeofvirus.html">read more</a> to explore
+        further.</p>
+
+    <!--Main information end-->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span></h1>
+                </a>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="homepage.html">VERTEX SYSTEM</a>. Develop by TranVietBach. All
+            Rights Reserved.
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

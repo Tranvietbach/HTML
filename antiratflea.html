@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            /* Aligns items vertically in the center */
+            justify-content: center;
+            /* Centers items horizontally */
+            gap: 20px;
+            /* Adds some space between the video and the text */
+        }
+
+        .video-container {
+            flex: 1;
+            /* Allows the video container to grow */
+        }
+
+        .text-container {
+            flex: 1;
+            /* Allows the text container to grow */
+            max-width: 600px;
+            /* Adjusts the maximum width of the text container */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!--mask start-->
+    <div class="container">
+        <div class="video-container">
+            <iframe width="720" height="500" src="https://www.youtube.com/embed/oxBGD875LMo"
+                title="YouTube video player" style="border:0;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="text-container">
+        <h1> Rat and Flea prevention </h1>
+        <p>
+            Rodents seek shelter indoors, especially during the cooler fall and winter months, and once inside can cause
+            more than just an unpleasant infestation. Rodents put homes at risk for electrical fires by gnawing through
+            wires. More frequently, though, rodents serve as vectors, carrying bacteria, such as salmonella, on their
+            bodies and contaminating food sources, kitchen surfaces and equipment. The common white-footed deer mouse is
+            also known to transmit the potentially fatal Hantavirus. </p>
+
+        Fortunately, there are many ways homeowners can proactively prevent and get rid of rodent infestations in
+        their homes:
+
+        <p> 1. Install door sweeps on exterior doors and repair damaged screens. </p>
+        <p> 2. Screen vents and openings to chimneys if you house happen to have vents or chimneys </p>
+        <p> 3. Seal cracks and holes on the outside of the home, including areas where utilities and pipes enter the
+            home,
+            using caulk, steel wool or a combination of both. </p>
+        <p> 4. Store food in airtight containers and dispose of garbage regularly. </p>
+        <p> 5. Keep attics, basements and crawl spaces well ventilated and dry. </p>
+        <p> 6. Replace loose mortar and weather stripping around the basement foundation and windows. </p>
+        <p> 7. Eliminate all moisture sites, including leaking pipes and clogged drains that provide the perfect
+            breeding site for pests. </p>
+        <p> 8. Inspect items such as boxes, grocery bags and other packages brought into the home. </p>
+        <p> 9. Store firewood at least 20 feet away from the house and keep shrubbery trimmed and cut back from the
+            house. </p>
+        <p> Some of the chemical you can also use against rat and flea such as: </p>  
+        <p> With insecticides: </p>
+        <p> DDT is the most commonly used insecticide against rat fleas </p>
+        <p> It is sprayed as powder form in areas frequented by rats and their burrows </p>
+        <p> Spraying should be done on the floor and on the walls up to a height of 1 foot </p>
+        <p> The DDT powder gets adhered to the fur coat of rats and kill the fleas </p>
+        <p> In areas where plague is endemic, fleas have acquired resistance to DDT and BHC </p>
+        <p> In these areas, malathion or carbaryl can be used </p>
+        <p> Other host animals like cats and dogs and their premises should also be treated with insecticide dusts or sprays </p>
+        <p> Repellants: </p>
+        <p> Diethyl toluamide is a good flea repellent </p> 
+        <p> Clothes treated with it repel fleas up to 1 week </p>
+        <p> Benzyl benzoate can also be used as repellent </p>
+
+        <p> If you suspect a pest infestation in your home, contact a licensed pest professional to inspect and treat
+            the pest problem. </p>
+        <p> If you spot evidence of a rodent infestation, do not hesitate to act to handle the problem. Rodents are
+            known to reproduce quickly, and a small problem can turn into a big issue overnight if left untreated. </p>
+
+    </div>
+    </div>
+    <a href="homepage.html" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Back to Homepage</a>
+
+    <!--Mask end-->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span>
+                    </h1>
+                </a>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="#">VERTEX SYSTEM</a>. Develop by TranVietBach. All
+            Rights Reserved.
+    </div>
+    <!-- Footer End -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

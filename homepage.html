@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Main Slider Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="owl-carousel owl-carousel-2 carousel-item-1 position-relative mb-3 mb-lg-0">
+                        <div class="position-relative overflow-hidden" style="height: 435px;">
+                            <img class="img-fluid h-100" src="img/corona.jpg" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-1">
+                                    <a class="text-white" href="Coronabigconsequences.html">Coronavirus</a>
+                                    <span class="px-2 text-white">/</span>
+                                    <a class="text-white" href="Coronabigconsequences.html">March 16, 2024</a>
+                                </div>
+                                <a class="h2 m-0 text-white font-weight-bold"
+                                    href="Coronabigconsequences.html">Coronavirus and its
+                                    consequence</a>
+                            </div>
+                        </div>
+                        <div class="position-relative overflow-hidden" style="height: 435px;">
+                            <img class="img-fluid h-100" src="img/influenza.jpg" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-1">
+                                    <a class="text-white" href="influenzatypes.html">Influenza</a>
+                                    <span class="px-2 text-white">/</span>
+                                    <a class="text-white" href="influenzatypes.html">match 16, 2024</a>
+                                </div>
+                                <a class="h2 m-0 text-white font-weight-bold" href="influenzatypes.html">Influenza and
+                                    its Type for quick read</a>
+                            </div>
+                        </div>
+                        <div class="position-relative overflow-hidden" style="height: 435px;">
+                            <img class="img-fluid h-100" src="img/spanish flu.jpg" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-1">
+                                    <a class="text-white" href="spanishflu.html">Spanish Flu</a>
+                                    <span class="px-2 text-white">/</span>
+                                    <a class="text-white" href="spanishflu.html">match 16, 2024</a>
+                                </div>
+                                <a class="h2 m-0 text-white font-weight-bold" href="spanishflu.html">The history of Spanish flu</a>
+                            </div>
+                        </div>
+                        <div class="position-relative overflow-hidden" style="height: 435px;">
+                            <img class="img-fluid h-100" src="img/bubonic.jpg" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-1">
+                                    <a class="text-white" href="">Bubonic plague</a>
+                                    <span class="px-2 text-white">/</span>
+                                    <a class="text-white" href="">match 16, 2024</a>
+                                </div>
+                                <a class="h2 m-0 text-white font-weight-bold" href="">Dangerous bubonic effect</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Type of virus</h3>
+                        <a class="text-secondary font-weight-medium text-decoration-none" href="typeofvirus.html">View
+                            All</a>
+                    </div>
+                    <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="img/corona2.jpg" style="object-fit: cover;">
+                        <a href="covid_SARS2.html"
+                            class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Corona SARS2-cov
+                        </a>
+                    </div>
+                    <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="img/corona3.jpg" style="object-fit: cover;">
+                        <a href="covid_MERS.html"
+                            class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Corona MERS-cov
+                        </a>
+                    </div>
+                    <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="img/influenza.jpg" style="object-fit: cover;">
+                        <a href="influenzaA.html"
+                            class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Influenza A(H5N1)
+                        </a>
+                    </div>
+                    <div class="position-relative overflow-hidden" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="img/Influenza_virusB.png" style="object-fit: cover;">
+                        <a href="influenzaB.html"
+                            class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Influenza B
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Slider End -->
+
+    <!-- Prevention Slider Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                <h3 class="m-0">Prevention and some treatment</h3>
+                <a class="text-secondary font-weight-medium text-decoration-none" href="prevention.html">View All</a>
+            </div>
+            <div class="owl-carousel owl-carousel-2 carousel-item-4 position-relative">
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/prevention.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="generalprevention.html">Corona prevention</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="generalprevention.html">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="generalprevention.html">Please follow the prevention to the
+                            virus</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/H5N1 Vaccine.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="">Take care of your flocks</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="">Give Vaccine to your flocks to prevent Influenza A</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/winter-viruses.png" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href=""></a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href=""> Some prevention to flu and respiratory virus</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/BubonicRat.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="antiratflea.html">Bubonic prevention</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="antiratflea.html">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="antiratflea.html">Rat and flea controll to Bubonic</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/child1.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="">Flu prevention</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="">Protecting children from flu</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/mask.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="mask.html">Wearing Mask</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="mask.html">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="mask.html">The important of wearing a mask</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/infants.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="">CDC notification</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="">CDC on protecting infants from RSV </a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/isolation.png" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="">Isolation as a resolution</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="">Quick guide to isolate yourself to protect the others </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Prevention Slider End -->
+
+    <!-- Prevention Slider Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                <h3 class="m-0">Read more from experts </h3>
+                <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
+            </div>
+            <div class="owl-carousel owl-carousel-2 carousel-item-4 position-relative">
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/COVID19's expert.png" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="https://www.unicef.org/vietnam/vi/covid-19">Unicef's expert on
+                                corrona</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="https://www.unicef.org/vietnam/vi/covid-19">March 16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="https://www.unicef.org/vietnam/vi/covid-19">Interview with
+                            Unicef's expert</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/image4.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white"
+                                href="https://patientser.com/difference-common-cold-influenza/">Influenza and common
+                                flu</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="https://patientser.com/difference-common-cold-influenza/">March
+                                16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white"
+                            href="https://patientser.com/difference-common-cold-influenza/">what're the differents
+                            between Influenza and flu</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/image5.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="https://www.history.com/topics/middle-ages/black-death"> Black
+                                plague's consequences</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="https://www.history.com/topics/middle-ages/black-death">March
+                                16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="https://www.history.com/topics/middle-ages/black-death"> How
+                            the black plague still haunt us till today</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/hero_1.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="https://www.nature.com/articles/s41430-020-0646-z">The sacrifice
+                                of Isolation</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="https://www.nature.com/articles/s41430-020-0646-z">March 16,
+                                2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="https://www.nature.com/articles/s41430-020-0646-z">How
+                            Covid19 really impact us in social life</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/hero_2.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white"
+                                href="https://diabetes.org/getting-sick-with-diabetes/coronavirus-covid-19/protecting-our-community-during-COVID-19">Protecting
+                                community</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white"
+                                href="https://diabetes.org/getting-sick-with-diabetes/coronavirus-covid-19/protecting-our-community-during-COVID-19">March
+                                16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white"
+                            href="https://diabetes.org/getting-sick-with-diabetes/coronavirus-covid-19/protecting-our-community-during-COVID-19">Diabetes
+                            people really need our help </a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="img/bird.jpg" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="https://www.cdc.gov/flu/avianflu/avian-flu-summary.htm">The new
+                                invisible bird flu</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="https://www.cdc.gov/flu/avianflu/avian-flu-summary.htm">March
+                                16, 2024</a>
+                        </div>
+                        <a class="h4 m-0 text-white" href="https://www.cdc.gov/flu/avianflu/avian-flu-summary.htm"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Prevention Slider End -->
+
+            <!-- Social Follow Start -->
+            <div class="pb-3">
+                <div class="bg-light py-2 px-4 mb-3">
+                    <h3 class="m-0">Follow Us</h3>
+                </div>
+                <div class="d-flex mb-3">
+                    <a href="https://www.facebook.com/profile.php?id=100066614974905"
+                        class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2"
+                        style="background: #39569E;">
+                        <small class="fab fa-facebook-f mr-2"></small><small>1,000,000 Fans</small>
+                    </a>
+                    <a href="https://twitter.com/TranVietBach"
+                        class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2"
+                        style="background: #52AAF4;">
+                        <small class="fab fa-twitter mr-2"></small><small>1,000,000 Followers</small>
+                    </a>
+                </div>
+                <div class="d-flex mb-3">
+                    <a href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"
+                        class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2"
+                        style="background: #DC472E;">
+                        <small class="fab fa-youtube mr-2"></small><small>1,000,000 Subscribers</small>
+                    </a>
+                    <a href="https://github.com/Tranvietbach"
+                        class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2"
+                        style="background: #1AB7EA;">
+                        <small class="fab fa-github mr-2"></small><small>1,000,000 Followers</small>
+                    </a>
+                </div>
+            </div>
+            <!-- Social Follow End -->
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span></h1>
+                </a>
+                <p></p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="#">VERTEX SYSTEM </a>. Develop by TranVietBach. All Rights
+            Reserved.
+
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+            <!-- Contact Javascript File -->
+            <script src="mail/jqBootstrapValidation.min.js"></script>
+            <script src="mail/contact.js"></script>
+
+            <!-- Template Javascript -->
+            <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            /* Aligns items vertically in the center */
+            justify-content: center;
+            /* Centers items horizontally */
+            gap: 20px;
+            /* Adds some space between the video and the text */
+        }
+
+        .video-container {
+            flex: 1;
+            /* Allows the video container to grow */
+        }
+
+        .text-container {
+            flex: 1;
+            /* Allows the text container to grow */
+            max-width: 600px;
+            /* Adjusts the maximum width of the text container */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!--mask start-->
+        <div class="video-container">
+            <iframe width="720" height="480" src="https://www.youtube.com/embed/XCdvo5fv-W0"
+                title="YouTube video player" style="border:0;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        
+            <h1>Influenza and general informations about its types for quick read </h1>
+            <p> Types of Influenza Viruses
+                There are four types of influenza viruses: A, B, C, and D. Influenza A and B viruses cause seasonal
+                epidemics of disease in people (known as flu season) almost every winter in the United States. Influenza
+                A viruses are the only influenza viruses known to cause flu pandemics (i.e., global epidemics of flu
+                disease). A pandemic can occur when a new and different influenza A virus emerges that infects people,
+                has the ability to spread efficiently among people, and against which people have little or no immunity.
+                Influenza C virus infections generally cause mild illness and are not thought to cause human epidemics.
+                Influenza D viruses primarily affect cattle with spillover to other animals but are not known to infect
+                people to cause illness. </p>
+
+                <p>Influenza A viruses are divided into subtypes based on two proteins on the surface of the virus:
+                hemagglutinin (H) and neuraminidase (N). There are 18 different hemagglutinin subtypes and 11 different
+                neuraminidase subtypes (H1 through H18 and N1 through N11, respectively). While more than 130 influenza
+                A subtype combinations have been identified in nature, primarily from wild birds, there are potentially
+                many more influenza A subtype combinations given the propensity for virus “reassortment.” Reassortment
+                is a process by which influenza viruses swap gene segments. Reassortment can occur when two influenza
+                viruses infect a host at the same time and swap genetic information. Current subtypes of influenza A
+                viruses that routinely circulate in people include A(H1N1) and A(H3N2). Influenza A subtypes can be
+                further broken down into different genetic “clades” and “sub-clades.” See the “Influenza Viruses”
+                graphic below for a visual depiction of these classifications. </p>
+
+                <p>Human Seasonal Influenza Virus: </p>
+                <p> This graphic shows the two types of influenza viruses (A and B) that cause most human illness and that
+                are responsible for flu seasons each year. Influenza A viruses are further classified into subtypes,
+                while influenza B viruses are further classified into two lineages: B/Yamagata and B/Victoria. Both
+                influenza A and B viruses can be further classified into clades and sub-clades (which are sometimes
+                called groups and sub-groups.) Note that this graphic is an example, and currently circulating influenza
+                clades and subclades may differ from those presented here. </p>
+
+                <img src="img/Influenzatypes.png" >
+
+                <p>Clades and sub-clades can be alternatively called “groups” and “sub-groups,” respectively. An influenza
+                clade or group is a further subdivision of influenza viruses (beyond subtypes or lineages) based on the
+                similarity of their HA gene sequences. Clades and subclades are shown on phylogenetic trees as groups of viruses that
+                usually have similar genetic changes (i.e., nucleotide or amino acid changes) and have a single common
+                ancestor represented as a node in the tree . Dividing viruses into clades and subclades
+                helps flu experts track the proportion of viruses from different clades in circulation.
+
+                Note that clades and sub-clades that are genetically different from others are not necessarily
+                antigenically different. This is best understood by first introducing the concepts of “antigens” and
+                “antigenic properties”. As previously described, flu viruses have hemagglutinin (H) and neuraminidase
+                (N) surface proteins. These proteins act as antigens. Antigens are molecular structures on the surface
+                of viruses that are recognized by the immune system and can trigger an immune response (such as antibody
+                production). The antigenic properties are a reflection of the antibody or immune response triggered by
+                the antigens on a particular virus. When two flu viruses are antigenically different, this means that a
+                host’s immune response (antibodies) elicited by infection or vaccination with one of the viruses will
+                not as easily recognize and neutralize the other virus. Therefore, for antigenically different viruses,
+                immunity developed against one of the viruses will not necessarily protect against the other virus as
+                well. </p>
+
+                <p>Conversely, when two flu viruses are antigenically similar, a host’s immune response (antibodies)
+                elicited by infection or vaccination with one of the viruses will recognize and neutralize the other
+                virus, thereby protecting against the other virus. </p>
+
+                <p>Currently circulating influenza A(H1N1) viruses are related to the pandemic 2009 H1N1 virus that emerged
+                in the spring of 2009 and caused a flu pandemic (CDC 2009 H1N1 Flu website). These viruses,
+                scientifically called the “A(H1N1)pdm09 virus,” and more generally called “2009 H1N1,” have continued to
+                circulate seasonally since then and have undergone genetic changes and changes to their antigenic
+                properties (i.e., the properties of the virus that affect immunity).
+
+                Influenza A(H3N2) viruses also change both genetically and antigenically. Influenza A(H3N2) viruses have
+                formed many separate, genetically different clades in recent years that continue to co-circulate.
+
+                Influenza B viruses are not divided into subtypes, but instead are further classified into two lineages:
+                B/Yamagata and B/Victoria. Similar to influenza A viruses, influenza B viruses can then be further
+                classified into specific clades and sub-clades. Influenza B viruses generally change more slowly in
+                terms of their genetic and antigenic properties than influenza A viruses, especially influenza A(H3N2)
+                viruses. Influenza surveillance data from recent years shows co-circulation of influenza B viruses from
+                both lineages in the United States and around the world. However, the proportion of influenza B viruses
+                from each lineage that circulate can vary by geographic location and by season. In recent years, flu
+                B/Yamagata viruses have circulated much less frequently in comparison to flu B/Victoria viruses
+                globally.
+
+                understanding the naming of flu viruses virus type, place virus isolated, strain number, year isolated,
+                virus subtype example a sydney o5 97 (h3n2)
+                Figure 2 – This image shows how influenza viruses are named. The name starts with the virus type,
+                followed by the place the virus was isolated, followed by the virus strain number (often a sample
+                identifier), the year isolated, and finally, the virus subtype. </p>
+
+               <p> Naming Influenza Viruses
+                CDC follows an internationally accepted naming convention for influenza viruses. This convention was
+                accepted by WHO in 1979 and published in February 1980 in the Bulletin of the World Health Organization,
+                58(4):585-591 (1980) (see A revision of the system of nomenclature for influenza viruses: a WHO
+                Memorandum [854 KB, 7 pages]). The approach uses the following components:
+
+                The antigenic type (e.g., A, B, C, D)
+                The host of origin (e.g., swine, equine, chicken, etc.). For human-origin viruses, no host of origin
+                designation is given. Note the following examples:
+                (Duck example): avian influenza A(H1N1), A/duck/Alberta/35/76
+                (Human example): seasonal influenza A(H3N2), A/Perth/16/2019
+                Geographical origin (e.g., Denver, Taiwan, etc.)
+                Strain number (e.g., 7, 15, etc.)
+                Year of collection (e.g., 57, 2009, etc.)
+                For influenza A viruses, the hemagglutinin and neuraminidase antigen description are provided in
+                parentheses (e.g., influenza A(H1N1) virus, influenza A(H5N1) virus)
+                The 2009 pandemic virus was assigned a distinct name: A(H1N1)pdm09 to distinguish it from the seasonal
+                influenza A(H1N1) viruses that circulated prior to the pandemic.
+                When humans are infected with influenza viruses that normally circulate in swine (pigs), these viruses
+                are call variant viruses and are designated with the letter “v” (e.g., an A(H3N2)v virus).
+                Influenza Vaccine Viruses
+                Current seasonal flu vaccines are formulated to protect against influenza viruses known to cause
+                epidemics, including: one influenza A(H1N1) virus, one influenza A(H3N2) virus, one influenza B/Victoria
+                lineage virus, and one influenza B/Yamagata lineage virus. Getting a flu vaccine can protect against
+                these viruses as well as additional flu viruses that are antigenically similar to the viruses used to
+                make the vaccine. Information about this season’s vaccine can be found at Preventing Seasonal Flu with
+                Vaccination. Seasonal flu vaccines do not protect against influenza C or D viruses or against zoonotic
+                (animal-origin) flu viruses that can cause human infections, such as variant or avian (bird) flu
+                viruses. In addition, flu vaccines will NOT protect against infection and illness caused by other
+                viruses that also can cause influenza-like symptoms. There are many other viruses besides influenza that
+                can result in influenza-like illness (ILI) that spread during flu season. </p>
+
+    <!--Mask end-->
+
+    <a href="homepage.html" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Back to Homepage</a>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span>
+                    </h1>
+                </a>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="#">VERTEX SYSTEM</a>. Develop by TranVietBach. All
+            Rights Reserved.
+    </div>
+    <!-- Footer End -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

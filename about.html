@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-lg-7 text-center mx-auto">
+                    <h2 class="section-heading">Meet Our Team</h2>
+                    <p>Vertex Systems team is a group about medical and healthcare that aim to provide informations and
+                        helpful guide about Virus and epidemic in a scientific way. We want to prepare you should
+                        situation continue to be alarmed in the future </p>
+                </div>
+            </div>
+            <video id="myVideo" width="1000" height="720" controls>
+                <source src="video/Team.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var video = document.getElementById('myVideo');
+                    video.play();
+                });
+            </script>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team">
+                        <img src="#" alt="Image" class="img-fluid">
+                        <h3>TranVietBach</h3>
+                        <p>Bach study programming at FPT. He has a few years of self-studied and a few projects. He is
+                            the lead
+                            programmer of this website </p>
+                        <p>
+                            <span class="d-block mb-2"><strong>Connect on social</strong></span>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;" href="https://twitter.com/TranVietBach"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;"
+                                href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;" href="https://github.com/TranVietBach"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team">
+                        <img src="" alt="Image" class="img-fluid">
+                        <h3>Hoang Minh Hieu </h3>
+                        <p>This gay nigga often sick all the time, it irony because we are doing a website about virus
+                            and this
+                            mfker just has a virus recently. He handle the slideshow </p>
+                        <p>
+                            <span class="d-block mb-2"><strong>Connect on social</strong></span>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;" href="https://twitter.com/TranVietBach"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;"
+                                href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;" href="https://github.com/TranVietBach"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team">
+                        <img src="" alt="Image" class="img-fluid">
+                        <h3>Do Quoc Ki </h3>
+                        <p>I have no idea where the fk this mfker now </p>
+                        <p>
+                            <span class="d-block mb-2"><strong>Connect on social</strong></span>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;" href="https://twitter.com/TranVietBach"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;"
+                                href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-secondary text-center mr-2 px-0"
+                                style="width: 38px; height: 38px;" href="https://github.com/TranVietBach"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <!-- Footer Start -->
+                <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-5">
+                            <a href="homepage.html" class="navbar-brand">
+                                <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span
+                                        class="text-primary">VERTEX</span></h1>
+                            </a>
+                            <div class="d-flex justify-content-start mt-4">
+                                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="https://www.facebook.com/profile.php?id=100066614974905"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-5">
+                            <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-secondary mb-2" href="about.html"><i
+                                        class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                                <a class="text-secondary mb-2" href="#"><i
+                                        class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                                <a class="text-secondary mb-2" href="#"><i
+                                        class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                                    policy</a>
+                                <a class="text-secondary mb-2" href="#"><i
+                                        class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                                    conditions</a>
+                                <a class="text-secondary" href="contact.html"><i
+                                        class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid py-4 px-sm-3 px-md-5">
+                    <p class="m-0 text-center">
+                        &copy; <a class="font-weight-bold" href="#">VERTEX SYSTEM</a>. Develop by TranVietBach. All
+                        Rights Reserved.
+                </div>
+                <!-- Footer End -->
+
+
+
+
+                <!-- JavaScript Libraries -->
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+                <script src="lib/easing/easing.min.js"></script>
+                <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+                <!-- Contact Javascript File -->
+                <script src="mail/jqBootstrapValidation.min.js"></script>
+                <script src="mail/contact.js"></script>
+
+                <!-- Template Javascript -->
+                <script src="js/main.js"></script>
+</body>
+
+</html>

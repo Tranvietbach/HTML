@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            /* Aligns items vertically in the center */
+            justify-content: center;
+            /* Centers items horizontally */
+            gap: 20px;
+            /* Adds some space between the video and the text */
+        }
+
+        .video-container {
+            flex: 1;
+            /* Allows the video container to grow */
+        }
+
+        .text-container {
+            flex: 1;
+            /* Allows the text container to grow */
+            max-width: 600px;
+            /* Adjusts the maximum width of the text container */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!--mask start-->
+    <div class="container">
+        <div class="video-container">
+            <iframe width="720" height="480" src="https://www.youtube.com/embed/TZ6sMPSqwno"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="text-container">
+            <h1>General prevention </h1>
+            <p> Improving Ventilation and Spending Time Outdoors
+
+                Improving ventilation (moving air into, out of, or within a room) and filtration (trapping particles on
+                a filter to remove them from the air) can help prevent virus particles from accumulating in indoor air.
+                Improving ventilation and filtration can help protect you from getting infected with and spreading the
+                virus that causes COVID-19. Spending time outside when possible instead of inside can also help: Viral
+                particles spread between people more readily indoors than outdoors. </p>
+
+            <p> Actions that can improve ventilation and filtration include:
+
+                Bringing in as much outdoor air as possible—for example, opening windows.
+                Increasing air filtration in your heating, ventilation, and air conditioning (HVAC) system, such as by
+                changing filters frequently and using filters that are properly fitted and provide higher filtration.
+                Using portable high-efficiency particulate air (HEPA) cleaners.
+                Turning on exhaust fans and using other fans to improve air flow.
+                Turning your thermostat to the “ON” position instead of “AUTO” to ensure your HVAC system provides
+                continuous airflow and filtration.
+                CDC’s interactive ventilation tools can help you see how much you can improve ventilation in your home
+                or school. </p>
+
+            <p> Moving indoor activities outdoors
+                You are less likely to be infected with COVID-19 during outdoor activities because virus particles do
+                not build up in the air outdoors as much as they do indoors. As the COVID-19 hospital admission level
+                rises, consider increasing the number of group activities you move outside. </p>
+
+            <p> Getting Tested for COVID-19 if you have COVID-19 symptoms. A viral test tells you if you are infected
+                with the virus that causes COVID-19. If you have COVID-19 symptoms, you should get tested for COVID-19
+                immediately. If you have been exposed to COVID-19 and do not have symptoms, you should test 5 full days
+                after your exposure. If you do not test at the right time, you are more likely to get an inaccurate test
+                result.
+
+                You may choose to get a PCR test at a testing site or healthcare facility. PCR tests are more likely to
+                detect the virus compared to antigen tests. Rapid antigen tests provide results quickly and are
+                available at testing sites or for use at-home. FDA recommends 2 negative antigen tests (if you have
+                symptoms) or 3 negative antigen tests (if you do not have symptoms), performed 2 days (48 hours) apart
+                to be confident that you do not have COVID-19.
+
+                Even when you don’t have symptoms or a recent exposure to COVID-19, testing may help you make informed
+                decisions about your health and your risk of spreading COVID-19 to others, especially those who are at
+                higher risk of severe illness. </p>
+
+            <p> Following Recommendations if you were exposed to someone with COVID-19, you may have been infected with
+                the virus. Follow CDC’s recommendations for what to do if you were exposed. This includes wearing a
+                high-quality mask when indoors around others (including inside your home) for 10 days, testing, and
+                monitoring yourself for
+                symptoms. Staying Home When You Have Suspected or Confirmed COVID-19. If you have COVID-19, you can
+                spread it to others, even if you do not have symptoms. If you have symptoms, get tested and stay home
+                until you have your results. If you have tested positive (even without symptoms), follow CDC’s isolation
+                recommendations. These recommendations include staying home and away from others for at least 5 days
+                (possibly more, depending on how the virus affects you) and wearing a high-quality mask when indoors
+                around others for a period of time.
+            </p>
+
+
+        </div>
+    </div>
+    <a href="homepage.html" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Back to Homepage</a>
+
+    <!--Mask end-->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span>
+                    </h1>
+                </a>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="#">VERTEX SYSTEM</a>. Develop by TranVietBach. All
+            Rights Reserved.
+    </div>
+    <!-- Footer End -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

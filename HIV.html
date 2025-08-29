@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .virus-map-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .virus-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .map {
+            flex: 1;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        .symptoms-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .symptoms-list {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .symptoms-image {
+            flex: 1;
+        }
+
+        .data img {
+            width: 200px;
+            /* Set the width of the icons */
+            height: 200px;
+            /* Set the height of the icons */
+            display: inline-block;
+            /* Ensure icons stay in line with text */
+            vertical-align: middle;
+            /* Align icons vertically in the middle */
+            margin-right: 10px;
+            /* Add spacing between the icon and text */
+        }
+
+        .data .number {
+            font-weight: bold;
+        }
+
+        .data .label {
+            color: #888;
+        }
+
+        .content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .content h3 {
+            margin: 0 10px 10px 0;
+        }
+
+        .content p {
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!--Main information-->
+    <div class="virus-map-container">
+        <div class="virus-info">
+            <h3> HIV/AIDS </h3>
+            <img src="img/HIV AIDS.jpg" alt="HIV" width="600" height="400">
+        </div>
+
+        <div class="map">
+            <h2> Kinhasa, Congo was the first place where Hepapitits A was discovered </h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127297.67587343676!2d15.322744649999997!3d-4.40130375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3130fe066a8b%3A0x168b7e4e1f52378d!2zS2luLXhhLXNhLCBD4buZbmcgaG_DoCBkw6JuIGNo4bunIENvbmdv!5e0!3m2!1svi!2s!4v1711010198290!5m2!1svi!2s"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <h3>Year Originated</h3>
+        <p>1959</p>
+        <h3>Location of Origin</h3>
+        <p> Kinkhasa, Congo </p>
+        <h3>Spread of Virus/Disease</h3>
+        <p> Global Pandemic </p>
+        <h3>Precautions required</h3>
+        <p> Get tested for HIV, Choose less risky sexual behaviors, Use condoms every time you have sex, Limit your
+            number of sexual partners, Get tested and treated for STDs, Talk to your health care provider about
+            pre-exposure prophylaxis (PrEP), Do not inject drugs, never involve heroin, cocain, injection, always be
+            clean and avoid situation when you unsure if it safe for sex or apply some meds, treatments... </p>
+    </div>
+
+    <img src="img/HIVTransmission.jpg" alt="HIVtransmition" witdh="800px" height="600px">
+    <p> Transmission:
+    <p> Sexual contact - HIV is spread most commonly by sexual contact with an infected partner. The virus enters the
+        body through the lining of the vagina, vulva, penis, rectum, or mouth during sexual activity. </p>
+
+    <p> Blood contamination - HIV may also be spread through contact with infected blood. However, due to the screening
+        of blood for evidence of HIV infection, the risk of acquiring HIV from blood transfusions is extremely low. </p>
+
+    <p> Needles - HIV is frequently spread by sharing needles, syringes, or drug use equipment with someone who is
+        infected with the virus. Transmission from patient to healthcare worker, or vice-versa through accidental sticks
+        with contaminated needles or other medical instruments, is rare. </p>
+
+    <p> Mother-infant - HIV also can be spread to babies born to, or breastfed by, mothers infected with the virus. </p>
+
+    <div class="symptoms-container">
+        <div class="symptoms-list">
+            <h2>Symptoms of HIV </h2>
+            <p>People with HIV/AIDS have reported a wide range of symptoms ranging from mild to severe. Symptoms may
+                appear approximately 2 to 4 weeks after exposure to the virus. Anyone can have mild to severe
+                symptoms.
+                Possible symptoms
+                include:</p>
+
+            <ul>
+                <li>Fever or chills</li>
+                <li>Night Sweats</li>
+                <li>Rash </li>
+                <li>Joint pain </li>
+                <li>Fatigue</li>
+                <li>Nausea or vomiting</li>
+                <li>Diarrhea</li>
+                <li>Severe Itching</li>
+                <li>Weight loss </li>
+                <li>Abdomen pain </li>
+                <li>Swollen Lymp gland </li>
+                <li>Sorethroat and painful mouth sores</li>
+            </ul>
+
+            <p>This list does not include all possible symptoms. Symptoms may change with new Influenza variants and can
+                vary by person. The CDC will continue to update this list as we learn more about Influenza.</p>
+        </div>
+
+        <div class="symptoms-image">
+            <img src="img/HIVsymptoms.png" alt="HBsAg Symptoms Image" width="1000px" height="600px">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-lg-7 text-center mx-auto">
+                <h2 class="section-heading">A Simple Report on HIV </h2>
+                <p>The stats below show the danger and consequences of HIV </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/activecase.jpg" alt="Active Cases Icon" class="icon text-primary">
+                    <strong class="d-block number">Up from 65,000,000 to 113,000,412</strong>
+                    <span class="label">Active Cases</span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/death.png" alt="Deaths Icon" class="icon text-primary">
+                    <strong class="d-block number">approximately from 32,900,124 to 53,124,978</strong>
+                    <span class="label">Deaths</span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/recover.png" alt="Recovered Cases Icon" class="icon text-primary">
+                    <strong class="d-block number">5</strong>
+                    <span class="label">Recovered Cases</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>The consequences of HIV </h3>
+    <img src="img/HIV impact.jpg" witdh="1200px" height="800px" style="max-height: 100%;">
+    <p> The impact of HIV/AIDS linger through all the humanity as one of the most tragic epidemic of humankind in the
+        history </p>
+    <p>The impact of AIDS has many dimensions, only a few of which are captured in official statistics or analysis by
+        the research community. The numbers of AIDS cases and HIV infection count as an impact: cumulatively, they state
+        the effect on the population of the United States and on particular subpopulations. Each case has many
+        dimensions—personal, professional, and institutional—through the many social organizations that touch the life
+        of each infected person. Each set of interactions creates an impact, and the diverse impacts have generated
+        equally diverse responses by individuals, groups, and communities. </p>
+
+
+    <p> Some of the most devastated aspect getting from HIV/AIDS: the public health system, health care finance and
+        delivery, clinical research and drug regulation, religion, voluntary organizations, the correctional system
+    </p>
+
+    <p>In certain aspect like work force: </p>
+    <p> The findings are sobering, for example: the number of people living with
+        HIV in the labour force has continued to increase, and will reach 29.9 million in
+        2020; AIDS will cost a projected 7.2 billion USD in lost earnings; almost half a
+        million labour-force deaths projected for 2020 are almost entirely avoidable. While
+        significant strides have been made in the AIDS response, major gaps remain,
+        which need to be addressed urgently. </p>
+    <p> Since 2000, the ILO has been supporting governments, employers and
+        workers organizations and other world of work stakeholders in responding to
+        HIV and AIDS at national, regional and global levels. Over the years the ILO has
+        published ground-breaking research, including the 2004 report on HIV/AIDS and
+        work: Estimates, impact and response, and the 2006 global estimates on the HIV/AIDS
+        impact on children and youth.</p>
+
+    <p>The mortality rate of HIV also very devastated, mean By killing off mainly young adults, AIDS seriously weakens
+        the taxable population, reducing the resources available for public expenditures such as education and health
+        services not related to AIDS resulting in increasing pressure for the state's finances and slower growth of the
+        economy. This results in a slower growth of the tax base, an effect that will be reinforced if there are growing
+        expenditures on treating the sick, training (to replace sick workers), sick pay and caring for AIDS orphans.
+        This is especially true if the sharp increase in adult mortality shifts the responsibility and blame from the
+        family to the government in caring for these orphans.</p>
+
+    <p> On the level of the household, AIDS results in both the loss of income and increased spending on healthcare by
+        the household. The income effects of this led to spending reduction as well as a substitution effect away from
+        education and towards healthcare and funeral spending. A study showed that households with an
+        HIV/AIDS patient spent twice as much on medical expenses as other households.</p>
+
+    <p> With economic stimulus from the government, however, HIV/AIDS can be fought through the economy. With some
+        money, HIV/AIDS patients will have to worry less about getting enough food and shelter and more about fighting
+        their disease. However, if economic conditions aren't good, a person with HIV/AIDS may decide to become a sex
+        trade worker to earn more money. As a result, more people become infected with HIV/AIDS.</p>
+
+
+    <h3>Main Treatment </h3>
+    <img src="img/HIVtreatment.jpg" width="600px" height="400px">
+
+
+    <p> There have been new specific treatments for HIV/AIDS, however we are still far from having an accurated and
+        adaptable way to completely cure HIV for a big populations. The solutions so far are the world's experts and
+        doctors are still keeping researching to find more way to cure HIV. </p>
+
+    <p> During the time, WHO strongly advise: HIV is treated with antiretroviral medicines, which work by stopping the
+        virus replicating in the body. This allows the immune system to repair itself and prevent further damage. </p>
+
+    <p> A combination of HIV drugs is used because HIV can quickly adapt and become resistant. </p>
+
+    <p> Some HIV treatments have been combined into a single pill, known as a fixed dose combination, although these
+        often cost more to prescribe. </p>
+
+    <p> Usually, people who have just been diagnosed with HIV take between 1 and 4 pills a day. Different combinations
+        of HIV medicines work for different people, so the medicine you take will be individual to you. </p>
+
+    <p> The amount of HIV virus in your blood (viral load) is measured to see how well treatment is working. Once it can
+        no longer be measured it's known as undetectable. Most people taking daily HIV treatment reach an undetectable
+        viral load within 6 months of starting treatment. </p>
+
+    <p> Many of the medicines used to treat HIV can interact with other medicines prescribed by your GP or bought over
+        the counter. These include some nasal sprays and inhalers, herbal remedies like St John's wort, as well as some
+        recreational drugs. Always check with your HIV clinic staff or your GP before taking any other medicines.</p>
+
+    <p>There is a new method that cure completely HIV by implant original cell of an extremely rare immune to HIV
+        peoples, however this way is extremely expensive, extensive, heavily experimental</p>
+
+    <p>Discover other virus and how they devastated the society <a href="typeofvirus.html">read more</a> to explore
+        further.</p>
+
+    <!--Main information end-->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span></h1>
+                </a>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="homepage.html">VERTEX SYSTEM</a>. Develop by TranVietBach. All
+            Rights Reserved.
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

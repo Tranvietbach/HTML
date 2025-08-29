@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            /* Aligns items vertically in the center */
+            justify-content: center;
+            /* Centers items horizontally */
+            gap: 20px;
+            /* Adds some space between the video and the text */
+        }
+
+        .video-container {
+            flex: 1;
+            /* Allows the video container to grow */
+        }
+
+        .text-container {
+            flex: 1;
+            /* Allows the text container to grow */
+            max-width: 600px;
+            /* Adjusts the maximum width of the text container */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!--mask start-->
+    <div class="video-container">
+        <iframe width="720" height="480" src="https://www.youtube.com/embed/ihSlDvQwHdg" title="YouTube video player"
+            style="border:0;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <div class="text-container" text-center >
+        <h1>The true big impact of corona virus </h1>
+        <p> Political impacts: </p>
+        <p> A number of provincial-level administrators of the Chinese Communist Party (CCP) were dismissed over
+            their handling of the quarantine efforts in Central China, a sign of discontent with the political
+            establishment's response to the outbreak in those regions. Some[who?] experts believe this is likely in
+            a move to protect Communist Party general secretary Xi Jinping from people's anger over the coronavirus
+            pandemic. Some[who?] commentators have suggested that outcry over the disease could be a rare protest
+            against the CCP. Additionally, protests in the special administrative region of Hong Kong have
+            strengthened due to fears of immigration from mainland China. Taiwan has also voiced concern over
+            being included in any travel ban involving the People's Republic of China (PRC) due to the "one-China
+            policy" and its disputed political status. Further afield, the treasurer of Australia was unable to
+            keep a pledge to maintain a fiscal surplus due to the effect of the coronavirus on the economy. A
+            number of countries have been using the outbreak to show their support to China, such as when Prime
+            Minister Hun Sen of Cambodia made a special visit to China with an aim to showcase Cambodia's support to
+            China in fighting the outbreak of the epidemic. </p>
+
+        <p> The United States president Donald Trump was criticised for his response to the pandemic. He
+            was accused of making several misleading or false claims, of failing to provide adequate information,
+            and of downplaying the pandemic's significance. Trump was also criticised for having closed down the
+            global health security unit of the United States National Security Council, which was founded to prepare
+            the government for potential pandemics. Research suggests that the pandemic was a contributing
+            factor to his failure to win reelection in the 2020 United States presidential election. </p>
+
+        <p> The Government of the Islamic Republic of Iran has been heavily affected by the virus, with at least two
+            dozen members (approximately 10%) of the Iranian legislature being infected, as well as at least 15
+            other current or former top government officials, including the vice-president. Advisers to Ali
+            Khamenei and Mohammad Javad Zarif have died from the disease. The spread of the virus has raised
+            questions about the future survival of the regime. </p>
+
+        <p> Sovereignty: </p>
+        <p> M. Nicolas Firzli, director of the World Pensions Council (WPC) and advisory-board member at the World
+            Bank Global Infrastructure Facility (GIF), refers to the pandemic as "the Greater Financial Crisis",
+            that will "bring to the surface pent-up financial and geopolitical dysfunctions ... [many] national
+            economies will suffer as a result, and their political sovereignty itself may be severely eroded". </p>
+
+        <p> Civil rights and democracy: </p>
+        <p> In April 2020, UN High Commissioner for Human Rights Michelle Bachelet warned that using states of
+            emergency during the pandemic "should not be a weapon governments can wield to quash dissent, control
+            the population, and even perpetuate their time in power". According to the OHCHR, around 80
+            countries already declared some form of state of emergency, with the most severe being among Nigeria,
+            Kenya, South Africa, the Philippines, Iran, Jordan, Morocco, Sri Lanka, Cambodia, Uzbekistan, Peru,
+            Honduras, El Salvador, the Dominican Republic, Uzbekistan, and Hungary. Iran, Jordan, Morocco, Oman, and
+            Yemen banned or suspended the printing and distribution of
+            newspapers. On 30 March 2020, the parliament of Hungary granted Prime Minister Viktor Orbán the
+            power to rule by decree for an indefinite period. </p>
+
+        <p> Conflicts: </p>
+        <p> The pandemic appears to have worsened conflict dynamics; it has also led to a United Nations
+            Security Council resolution demanding a global ceasefire. On March 23, 2020, United Nations
+            Secretary-General António Guterres issued an appeal for a global ceasefire as part of the United
+            Nations' response to the pandemic. On 24 June 2020, 170 UN Member States and Observers signed a
+            non-binding statement in support of the appeal, rising to 172 on 25 June 2020. On 1 July 2020, the
+            UN Security Council passed resolution S/RES/2532 (2020), demanding a "a general and immediate cessation
+            of hostilities in all situations on its agenda," expressing support for "the efforts undertaken by the
+            Secretary-General and his Special Representatives and Special Envoys in that respect," calling for "all
+            parties to armed conflicts to engage immediately in a durable humanitarian pause" of at least 90
+            consecutive days, and calling for greater international cooperation to address the pandemic. </p>
+
+        <p> Educational impact: </p>
+        <p>
+            The pandemic has affected educational systems worldwide, leading to the widespread closures of schools
+            and universities. According to data released by UNESCO on 25 March, school and university closures
+            due to COVID-19 were implemented nationwide in 165 countries. Including localized closures, this affects
+            over 1.5 billion students worldwide, accounting for 87% of enrolled learners. Those higher
+            education universities have also impacted their students by deciding not to stop classes but rather
+            migrate everything to virtual. Of 195 students interview surveyed at a large university, their findings
+            show that there is an increased concern in mental health of these students. During the COVID-19
+            pandemic, many people who were not connected to the internet lost access to health care and education.
+            Production in all industries was seriously harmed. </p>
+
+        <p> COVID-19 and inequality: </p>
+        <p> Low income individuals are more likely to contract COVID-19 and to die from it. In both New York
+            City and Barcelona, low income neighborhoods are disproportionately hit by COVID-19 cases. Hypotheses
+            for why this is the case include that poorer families are more likely to live in crowded housing and
+            work in the low skill jobs, such as supermarkets and elder care, which are deemed essential during the
+            crisis. In the United States, millions of low-income people may lack access to health care due
+            to being uninsured or underinsured. Millions of Americans lost their health insurance after losing
+            their jobs. Many low income workers in service jobs have become unemployed. Many people began
+            teleworking during the pandemic, however teleworking has only been suitable for a tiny
+            group of workers. Highly educated workers, usually in white-collar professions have been able to
+            telework more than other working environments. For those still commuting to work despite the pandemic or
+            other factors, transport remains vital. </p>
+
+        <p> Religious impact: </p>
+        <p> The pandemic has impacted religion in various ways, including the cancellation of the worship services
+            of various faiths, the closure of Sunday Schools, as well as the cancellation of pilgrimages surrounding
+            observances and festivals. Many churches, synagogues, mosques, and temples have offered worship
+            through livestream amidst the pandemic. Relief wings of religious organisations have dispatched
+            medical supplies and other aid to affected areas. Adherents of many religions have gathered together
+            to pray for an end to the pandemic, for those affected by it, as well as for the deity they believe in
+            to give physicians and scientists the wisdom to combat the disease;in the United States,
+            Trump designated 15 March 2020 as a National Day of Prayer for "God’s healing hand to be placed on the
+            people of our Nation". </p>
+
+        <p> Healthcare and COVID-19: </p>
+        <p>One of the social impacts of COVID-19 is its influence on healthcare. Two main changes in healthcare
+            include the providers’ experience of patient care and delivery of care. With the start of COVID-19
+            pandemic, healthcare workers struggled to keep up with an increase in demands, a reduced capacity,
+            increased stress and workload, and to lack of protective equipment. COVID-19 changed the perception of
+            patient care for providers. Research about patient care during
+            COVID-19 suggested that nurses, for example, felt more confident in their skills and role in the
+            healthcare team. Nurses viewed their profession as essential and felt increased pride in their services,
+            as well as, patients and other healthcare workers gained a better perspective of the nursing profession.
+            The close contact and extensive care nurses provided during the pandemic allowed them to appreciate the
+            nursing profession. Moreover, the research indicates that nurses achieved professional growth, and
+            uncovered a greater need to provide counseling services for COVID-19 patients to help cope with their
+            illness. Additional research suggested a different progression to nurses’ caregiving during
+            COVID-19. Initially, nurses experienced negative emotions associated with patient care such as increased
+            fatigue and stressful emotions. Many nurses found self-coping styles such as teamwork and altruism to
+            combat their fatigue. As the pandemic progressed, nurses developed a sense of gratefulness and
+            self-reflection as opposed to the negative emotions during the initial stages of the pandemic.
+            Healthcare delivery is another aspect of healthcare that changed during the pandemic. Most healthcare
+            providers transitioned to providing virtual or telemedicine visits in place of traditional office
+            visits. One study found that psychiatrists faced some barriers using telemedicine such as lack of
+            non-verbal clues, access to internet issues, and environmental distraction. However, the overall
+            transition to telemedicine was positive and successful, even though many patients and providers still
+            prefer in-person interaction. For healthcare providers, there is a shared feeling of responsibility,
+            added challenges from working with COVID-19 patients, and finding ways to be resilient. As the research
+            finds, COVID-19 placed
+            healthcare providers in a new environment and with unexpected challenges. Providers experienced fears of
+            helplessness, coupled with the obligation to know answers for their patients. Other common fears
+            included becoming infected and spreading the disease to others. To mitigate these fears, the study
+            suggested providing extensive and regular training to healthcare professionals. </p>
+
+        <p> Post-quarantine transmission risks: </p>
+        <p>A current debate going on amongst the community involves the transmission risks post-quarantine. When
+            COVID-19 reached the United States, the original required quarantine was 14 days of length, and later
+            was shortened to 10 days, then 7 days, and eventually even 5 days in some places. Researchers have
+            conducted studies using a variety of methods to analyze the statistical data behind the transmission
+            risks. A group of researchers performed an experiment at numerous college universities, testing to
+            examine what the post quarantine transmission risk was. From Harvard University, Duke University, Boston
+            University, and Northeastern University, the post quarantine transmission risk after 7 days, was
+            13%. However, the difficulty with this is that some individuals may remain communicable as short as
+            4 days or as long as 14 days. Another leading factor to the post quarantine transmission risks that
+            researchers discover After comparing the transmission risks from individuals with different strains, the
+            Omicron strain was found to be the most communicable on day 5, but begins to balance out with the other
+            strains in days 5-10. Having differing rates of infectivity for each variant can play a role in the
+            amount of time an individual should quarantine. This is one of the many factors affecting the post
+            quarantine transmission risks, and more research should be done before coming to a set conclusive
+            quarantine time. </p>
+
+        <p> Psychological impact: </p>
+        <p> On 18 March 2020, the World Health Organization issued a report related to mental health and
+            psychosocial issues by addressing instructions and some social considerations during the COVID-19
+            outbreak. Due to doubts if pets or other livestock may pass on coronavirus to humans, many people were
+            reluctant to keep their pets fearing transmission, for instance in the Arab World, celebrities were
+            urging people to keep and protect their pets. Meanwhile, people in the United Kingdom tended to
+            acquire more pets during the coronavirus lockdown.</p>
+
+
+        <p>Socialization: </p>
+        <p> Crowd anxiety and apprehension to pre-pandemic behavior were normalized due to the virus and subsequent
+            lockdowns around the world. Additionally, social upheaval and other stressors have resulted in hesitancy
+            to be comfortable sharing the same physical space with strangers. In February 2021, Saturday Night
+            Live poked fun at "post-COVID dating" after a year of isolation imagining the "weird quirks and
+            behaviors we've picked up". </p>
+        <!--Mask end-->
+    </div>
+    <a href="homepage.html" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Back to Homepage</a>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span>
+                    </h1>
+                </a>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="#">VERTEX SYSTEM</a>. Develop by TranVietBach. All
+            Rights Reserved.
+    </div>
+    <!-- Footer End -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Style for valid input */
+        input:valid {
+            border: 1px solid green;
+        }
+
+        /* Style for invalid input */
+        input:invalid {
+            border: 1px solid red;
+        }
+
+        /* Style for error message */
+        p.help-block {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        /* Style for submit button */
+        button#sendMessageButton {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Hover effect for submit button */
+        button#sendMessageButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const form = document.getElementById("Signupform");
+
+                    form.addEventListener("submit", function (event) {
+                        const username = document.getElementById("username");
+                        const email = document.getElementById("email");
+                        const password = document.getElementById("password");
+
+                        let valid = true;
+
+                        // Validate username
+                        if (username.value.trim() === "") {
+                            displayError(username, "Please enter your username.");
+                            valid = false;
+                        }
+
+                        // Validate email
+                        if (!validateEmail(email.value)) {
+                            displayError(email, "Please enter a valid email address.");
+                            valid = false;
+                        }
+
+                        // Validate password
+                        if (!validatePassword(password.value)) {
+                            displayError(password, "Password must have letters, uppercase, number, and special characters.");
+                            valid = false;
+                        }
+
+                        if (!valid) {
+                            event.preventDefault(); // Prevent form submission if there are validation errors
+                        }
+                    });
+
+                    function displayError(input, message) {
+                        const errorElement = input.nextElementSibling;
+                        errorElement.innerText = message;
+                    }
+
+                    function validateEmail(email) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        return emailRegex.test(email);
+                    }
+
+                    function validatePassword(password) {
+                        const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[A-Za-z\d!@#$%^&*]{8,}$/;
+                        return passwordRegex.test(password);
+                    }
+                });
+
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <div class="row">
+        <!-- Signup form starts -->
+        <div class="col-md-7">
+            <h3>COME WITH US !</h3>
+            <img src="img/wack.png" class="img-fluid" width="1000px" height="400px">
+            <div class="signup-form bg-light mb-3" style="padding: 30px;">
+                <!-- Form content -->
+
+                <div class="col-md-7">
+                    <div class="login-form bg-light mb-3" style="padding: 30px;">
+                        <div id="success"></div>
+                        <form name="login-form" id="Loginform" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="control-group">
+                                        <input type="text" class="form-control p-4" id="username"
+                                            placeholder="Your user Name" required="required"
+                                            data-validation-required-message="Please enter your username" />
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control p-4" id="password" placeholder="Password"
+                                    required="required" data-validation-required-message="Please enter your password" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary font-weight-semi-bold px-4" style="height: 50px;"
+                                    type="submit" id="sendMessageButton">Submit</button>
+                            </div>
+                        </form>
+                        <!--form content end-->
+                    </div>
+                </div>
+            </div>
+            <!-- Signup form end -->
+        </div>
+        <!-- Picture section starts -->
+        <div class="col-md-5">
+            <h3>Start learning to protecting your health and your beloved from today with us </h3>
+            <p>“You have brains in your head. You have feet in your shoes. You can steer yourself any direction you
+                choose. You're on your own. And you know what you know. And you are the guy who'll decide where to go."
+            </p>
+            <p>— Dr. Seuss</p>
+            <div class="signup-picture">
+                <img src="img/female-doctor.jpg" alt="Sign Up" class="img-fluid" width="500px" height="200px">
+            </div>
+        </div>
+        <!-- Picture section ends -->
+    </div>
+
+
+    <!-- Social Follow Start -->
+    <div class="pb-3">
+        <div class="bg-light py-2 px-4 mb-3">
+            <h3 class="m-0">Follow Us</h3>
+        </div>
+        <div class="d-flex mb-3">
+            <a href="https://www.facebook.com/profile.php?id=100066614974905"
+                class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2" style="background: #39569E;">
+                <small class="fab fa-facebook-f mr-2"></small><small>1,000,000 Fans</small>
+            </a>
+            <a href="https://twitter.com/TranVietBach"
+                class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2" style="background: #52AAF4;">
+                <small class="fab fa-twitter mr-2"></small><small>1,000,000 Followers</small>
+            </a>
+        </div>
+        <div class="d-flex mb-3">
+            <a href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"
+                class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2" style="background: #DC472E;">
+                <small class="fab fa-youtube mr-2"></small><small>1,000,000 Subscribers</small>
+            </a>
+            <a href="https://github.com/Tranvietbach"
+                class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2" style="background: #1AB7EA;">
+                <small class="fab fa-github mr-2"></small><small>1,000,000 Followers</small>
+            </a>
+        </div>
+    </div>
+    <!-- Social Follow End -->
+    </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span></h1>
+                </a>
+                <p></p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy
+                        &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="#">VERTEX SYSTEM </a>. Develop by TranVietBach. All Rights
+            Reserved.
+
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+            <!-- Contact Javascript File -->
+            <script src="mail/jqBootstrapValidation.min.js"></script>
+            <script src="mail/contact.js"></script>
+
+            <!-- Template Javascript -->
+            <script src="js/main.js"></script>
+</body>
+
+</html>

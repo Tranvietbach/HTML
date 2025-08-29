@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VERTEX SYSTEM </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .virus-map-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .virus-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .map {
+            flex: 1;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        .symptoms-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .symptoms-list {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .symptoms-image {
+            flex: 1;
+        }
+
+        .data img {
+            width: 200px;
+            /* Set the width of the icons */
+            height: 200px;
+            /* Set the height of the icons */
+            display: inline-block;
+            /* Ensure icons stay in line with text */
+            vertical-align: middle;
+            /* Align icons vertically in the middle */
+            margin-right: 10px;
+            /* Add spacing between the icon and text */
+        }
+
+        .data .number {
+            font-weight: bold;
+        }
+
+        .data .label {
+            color: #888;
+        }
+
+        .content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .content h3 {
+            margin: 0 10px 10px 0;
+        }
+
+        .content p {
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
+                        <div class="text-truncate"><a class="text-secondary" href="">Coronavirus has been defeated at
+                                some countries</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Risk of a new virus strain has been
+                                found in India</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="">Experts are concerning the world is
+                                not ready for another Outbreak</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block" id="dynamicDate">
+                Saturday, March 16, 2024
+            </div>
+
+            <script>
+                function updateDate() {
+                    var now = new Date();
+                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                    var day = days[now.getDay()];
+                    var month = months[now.getMonth()];
+                    var date = now.getDate();
+                    var year = now.getFullYear();
+
+                    document.getElementById('dynamicDate').innerHTML = day + ', ' + month + ' ' + date + ', ' + year;
+                }
+
+                updateDate(); // Display date initially
+            </script>
+        </div>
+    </div>
+    <div class="row align-items-center py-2 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">VERTEX</span>SYSTEM</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="homepage.html" class="nav-item nav-link active">Home</a>
+                    <a href="typeofvirus.html" class="nav-item nav-link">Type of virus</a>
+                    <a href="prevention.html" class="nav-item nav-link">Prevention</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="signup.html" class="nav-item nav-link">Sign up</a>
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!--Main information-->
+    <div class="virus-map-container">
+        <div class="virus-info">
+            <h3>Hepapitis B (HBsAg) </h3>
+            <img src="img/GanB.jpg" alt="ganA" width="600" height="400">
+        </div>
+
+        <div class="map">
+            <h2> Austria is the first place where Hepapitits A was discovered </h2>
+            <iframe <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749828.466462797!2d13.345758150000002!3d47.69647194999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079b259d2a7f%3A0x1012d47bdde4c1af!2zw4Fv!5e0!3m2!1svi!2s!4v1711000256184!5m2!1svi!2s"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <h3>Year Originated</h3>
+        <p>1965</p>
+        <h3>Location of Origin</h3>
+        <p> Austria, Europe </p>
+        <h3>Spread of Virus/Disease</h3>
+        <p> Local Pandemic </p>
+        <h3>Precautions required</h3>
+        <p> Apply Vaccine as soon as possible, stay contact with doctor, have healthy habits such as wash
+            hand frequently, bath and clean frequently, eat and drink clean, boil and avoid junk food </p>
+    </div>
+
+    <img src="img/contaminateB.jpg" alt="HepapititsAtransmition" witdh="800px" height="600px">
+    <p> Transmission of hepatitis B virus results from exposure to infectious blood or body fluids containing blood. HBV
+        is 50 to 100 times more infectious than human immunodeficiency virus (HIV). HBV can be transmitted through
+        several routes of infection. In vertical transmission, HBV is passed from mother to child (MTCT) during
+        childbirth. Without intervention, a mother who is positive for HBsAg has a 20% risk of passing the infection
+        to her offspring at the time of birth. This risk is as high as 90% if the mother is also positive for
+        HBeAg.
+
+        Early life horizontal transmission can occur through bites, lesions, certain sanitary habits, or other contact
+        with secretions or saliva containing HBV. Adult horizontal transmission is known to occur through sexual
+        contact, blood transfusions and transfusion with other human blood products,[36] re-use of contaminated
+        needles and syringes. Breastfeeding after proper immunoprophylaxis does not appear to contribute to
+        mother-to-child-transmission (MTCT) of HBV. </p>
+
+    <div class="symptoms-container">
+        <div class="symptoms-list">
+            <h2>Symptoms of Hepapitis B</h2>
+            <p>People with Hepapitis B have reported a wide range of symptoms ranging from mild to severe. Symptoms may
+                appear approximately 6 months after exposure to the virus. Anyone can have mild to severe
+                symptoms.
+                Possible symptoms
+                include:</p>
+
+            <ul>
+                <li>Mild fever or chills</li>
+                <li>Dark Urine</li>
+                <li>Joint pain </li>
+                <li>Fatigue</li>
+                <li>Nausea or vomiting</li>
+                <li>Diarrhea</li>
+                <li>Severe Itching</li>
+                <li>Yellow eyes </li>
+                <li>Abdomen pain </li>
+                <li>Losing your appetite</li>
+            </ul>
+
+            <p>This list does not include all possible symptoms. Symptoms may change with new Influenza variants and can
+                vary by person. The CDC will continue to update this list as we learn more about Influenza.</p>
+        </div>
+
+        <div class="symptoms-image">
+            <img src="img/Bsymptoms.jpeg" alt="HBsAg Symptoms Image" width="1000px" height="600px">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-lg-7 text-center mx-auto">
+                <h2 class="section-heading">A Simple Report on Hepapitis </h2>
+                <p>The stats below show the danger and consequences of Hepapitis B </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/activecase.jpg" alt="Active Cases Icon" class="icon text-primary">
+                    <strong class="d-block number">30,412,687</strong>
+                    <span class="label">Active Cases</span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/death.png" alt="Deaths Icon" class="icon text-primary">
+                    <strong class="d-block number">approximately 891,452</strong>
+                    <span class="label">Deaths</span>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="data">
+                    <img src="img/recover.png" alt="Recovered Cases Icon" class="icon text-primary">
+                    <strong class="d-block number">6,124,547</strong>
+                    <span class="label">Recovered Cases</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>The consequences of Hepapitis B </h3>
+    <img src="img/Impact Hepapitis B.png" witdh="1200px" height="800px" style="max-height: 100%;">
+    <p> The impact is mostly on woman and children: </p>
+    <p> HBV infection acquired during infancy and early childhood has a high likelihood of progressing to chronic
+        infection, which can lead to chronic hepatitis, cirrhosis, and primary hepatocellular carcinoma. In areas of the
+        world where HBV infection occurs predominantly in infants and young children, routine infant immunization with
+        hepatitis B vaccine is the most appropriate vaccination strategy. In the United States, the majority of HBV
+        infections occur in adults with behaviors or occupations that put them at risk for HBV infection. Nevertheless,
+        infection acquired during infancy and early childhood contributes significantly to the burden of chronic liver
+        disease in the United States. Until recently, the vaccination strategy in the United States has included HBsAg
+        screening of pregnant women and vaccination of infants born to infected women and vaccination of people in
+        groups at high risk for HBV infection. Because of the difficulties in accessing and vaccinating persons from
+        high-risk groups and the recent findings that HBV infection occurs more commonly among children in some groups
+        in the United States than previously appreciated, the Immunization Practices Advisory Committee of the US Public
+        Health Service and the American Academy of Pediatrics in 1991 endorsed a strategy of universal immunization of
+        infants for hepatitis B. This strategy has the advantages of accessing infants in the United States through
+        preexisting vaccine delivery systems and vaccinating individuals prior to their engaging in high-risk behavior.
+        Continued screening of pregnant women for HBsAg is necessary to prevent perinatal HBV transmission and to
+        identify for vaccination those household and sexual contacts of HBV carriers, a group that is also at high risk
+        of HBV infection. </p>
+
+
+
+
+    <h3>Main Treatment </h3>
+    <img src="img/HepapitisBVaccine.jpg" width="600px" height="400px">
+
+
+    <p> There is no specific treatment for acute hepatitis B. Chronic hepatitis B can be treated with medicines. </p>
+
+    <p> Care for acute hepatitis B should focus on making the person comfortable. They should eat a healthy diet and
+        drink plenty of liquids to prevent dehydration from vomiting and diarrhoea. </p>
+
+    <p> Chronic hepatitis B infection can be treated with oral medicines, including tenofovir or entecavir. Treatment
+        can: </p>
+
+    <p> 1. slow the advance of cirrhosis </p>
+    <p> 2. reduce cases of liver cancer </p>
+    <p> 3. improve long term survival. </p>
+    <p> Most people who start hepatitis B treatment must continue it for life. </p>
+
+    <p> It is estimated that 12 to 25% of people with chronic hepatitis B infection will require treatment, depending on
+        setting and eligibility criteria. The ongoing 2023 update of the WHO Hepatitis B treatment guidelines will
+        expand treatment eligibility and increase the proportion of people on treatment. </p>
+
+    <p> In low-income settings, most people with liver cancer present late in the course of the disease and die within
+        months of diagnosis. In high-income countries, patients present to hospital earlier in the course of the disease
+        and have access to surgery and chemotherapy, which can prolong life for several months to a few years. Liver
+        transplantation is sometimes used in people with cirrhosis or liver cancer in technologically advanced
+        countries, with varying success. </p>
+
+    <p>Vaccine for hepapitis B is also an important recommendation with childrens and infants as soon as possible. </p>    
+
+    <p>Discover other virus and how they devastated the society <a href="typeofvirus.html">read more</a> to explore
+        further.</p>
+
+    <!--Main information end-->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="homepage.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">VERTEX</span></h1>
+                </a>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://twitter.com/TranVietBach"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/profile.php?id=100066614974905"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                        href="https://www.youtube.com/channel/UC5lIDl5_lN7w6xehijBep8w"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="about.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>About</a>
+                    <a class="text-secondary mb-2" href="#"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy &
+                        policy</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms &
+                        conditions</a>
+                    <a class="text-secondary" href="contact.html"><i
+                            class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-bold" href="homepage.html">VERTEX SYSTEM</a>. Develop by TranVietBach. All
+            Rights Reserved.
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
